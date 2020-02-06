@@ -7,7 +7,16 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Main {
-
+    /**
+     *        2                  1
+     *      /  \               /  \
+     *    17   11             3    5
+     *        /  \          /  \
+     *       4    6        7    9
+     *                   /  \
+     *                 10   15
+     * @param args
+     */
     public static void main(String[] args) {
 
         Collection<Folder> folders = new ArrayList<>();
@@ -22,9 +31,9 @@ public class Main {
 
         folders.add(new Folder(4L, 11L, "folder3"));
         folders.add(new Folder(17L, 2L, "folder17"));
-        folders.add(new Folder(11L, 2L, "folder9"));
+        folders.add(new Folder(11L, 2L, "folder11"));
         folders.add(new Folder(2L, null, "folder2"));
-        folders.add(new Folder(6L, 11L, "folder5"));
+        folders.add(new Folder(6L, 11L, "folder6"));
 
 
         Map<Long, Folder> foldersMap = new HashMap<>();
