@@ -8,14 +8,13 @@ import java.util.stream.Collectors;
 
 public class Main {
     /**
-     *        2                  1
-     *      /  \               /  \
-     *    17   11             3    5
-     *        /  \          /  \
-     *       4    6        7    9
-     *                   /  \
-     *                 10   15
-     * @param args
+     * 2                  1
+     * /  \               /  \
+     * 17   11             3    5
+     * /  \          /  \
+     * 4    6        7    9
+     * /  \
+     * 10   15
      */
     public static void main(String[] args) {
 
@@ -35,7 +34,6 @@ public class Main {
         folders.add(new Folder(2L, null, "folder2"));
         folders.add(new Folder(6L, 11L, "folder6"));
 
-
         Map<Long, Folder> foldersMap = new HashMap<>();
 
         for (Folder folder : folders) {
@@ -50,9 +48,10 @@ public class Main {
                     folder.getChildFolders().add(folderFromMap);
                 }
             }
-
         }
-        Collection<Folder> rootFolders = folders.stream().filter(folder -> folder.getParentId() == null).collect(Collectors.toList());
+
+        Collection<Folder> rootFolders =
+                folders.stream().filter(folder -> folder.getParentId() == null).collect(Collectors.toList());
 
         System.out.println(rootFolders);
     }
