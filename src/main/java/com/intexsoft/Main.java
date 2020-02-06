@@ -8,13 +8,13 @@ import java.util.stream.Collectors;
 
 public class Main {
     /**
-     * 2                  1
-     * /  \               /  \
-     * 17   11             3    5
-     * /  \          /  \
-     * 4    6        7    9
-     * /  \
-     * 10   15
+     *        2                  1
+     *      /  \               /  \
+     *    17   11             3    5
+     *        /  \          /  \
+     *       4    6        7    9
+     *                   /  \
+     *                 10   15
      */
     public static void main(String[] args) {
 
